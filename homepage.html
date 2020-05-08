@@ -5,34 +5,53 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css" />
   <title>Boston Film Festival</title>
 </head>
 <style>
-  .myModal{
-
-  }
+  .myModal {}
 </style>
 <script>
-  // $(document).ready(function(){
-  //     /* Get iframe src attribute value i.e. YouTube video url
-  //     and store it in a variable */
-  //     var url = $(".myModal iframe").attr('src');
+  $(document).ready(function () {
+    //     /* Get iframe src attribute value i.e. YouTube video url
+    //     and store it in a variable */
+    //     var url = $(".myModal iframe").attr('src');
+
+    //     /* Assign empty url value to the iframe src attribute when
+    //     modal hide, which stop the video playing */
+    //     $("#modal-1").on('hide.bs.modal', function(){
+    //         $(".myModal iframe").attr('src', '');
+    //     });
+
+    //     /* Assign the initially stored url back to the iframe src
+    //     attribute when modal is displayed again */
+    //     $(".myModal iframe").on('show.bs.modal', function(){
+    //         $("#.myModal iframe").attr('src', url);
+    //     });
+    // });
+
+    $("#modal-1").on("show.bs.modal", function (event) {
+      console.log("hello");
+      var button = $(event.relatedTarget);
+      var link = button.data("youtube-link");
+      console.log(link);
+      var iframe = $(".myModal iframe").attr("src",link);
       
-  //     /* Assign empty url value to the iframe src attribute when
-  //     modal hide, which stop the video playing */
-  //     $("#modal-1").on('hide.bs.modal', function(){
-  //         $(".myModal iframe").attr('src', '');
-  //     });
-      
-  //     /* Assign the initially stored url back to the iframe src
-  //     attribute when modal is displayed again */
-  //     $(".myModal iframe").on('show.bs.modal', function(){
-  //         $("#.myModal iframe").attr('src', url);
-  //     });
-  // });
-  </script>
+
+    });
+  });
+</script>
+
 <body>
   <!-- Modal-1 -->
   <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -49,12 +68,15 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col myModal">
-                <iframe class="embed-responsive-item"width="560" height="315" src="https://www.youtube.com/embed/L6P3nI6VnlY" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" width="560" height="315" src="" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
               </div>
             </div>
           </div>
-          
+
+
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -105,7 +127,7 @@
             <button type="button" class="btn btn-success btn-lg">Register now!</button>
           </div>
 
-          <p class="text-center"><em>Only limited seats availble!</em></p>
+          <p class="text-center"><em>Only limited seats available!</em></p>
         </div>
       </div>
     </div>
@@ -136,7 +158,8 @@
               <td>Extraction</td>
               <td>Action</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-1">Watch
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                  data-youtube-link="https://www.youtube.com/embed/L6P3nI6VnlY" data-target="#modal-1">Watch
                   Trailer</button>
               </th>
             <tr>
@@ -144,7 +167,8 @@
               <td>The Lovebirds</td>
               <td>Comedy/Romance</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/YzPq8uVgLe8" data-target="#modal-1">Watch Trailer</button>
               </th>
             </tr>
             <tr>
@@ -152,7 +176,8 @@
               <td>Once Upon a Time in Hollywood</td>
               <td>Comedy/Drama</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/ELeMaP8EPAA" data-target="#modal-1">Watch Trailer</button>
               </th>
             </tr>
             </tr>
@@ -164,14 +189,16 @@
               <td>The Irishman</td>
               <td>Crime/Drama</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/WHXxVmeGQUc" data-target="#modal-1">Watch Trailer</button>
               </th>
             <tr>
               <td>8:05pm - 10:15pm</td>
               <td>A Star is Born</td>
               <td>Romance</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/nSbzyEJ8X9E" data-target="#modal-1">Watch Trailer</button>
               </th>
             </tr>
             <tr>
@@ -179,7 +206,8 @@
               <td>Bad Boys for Life</td>
               <td>Comedy</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/jKCj3XuPG8M" data-target="#modal-1">Watch Trailer</button>
               </th>
             </tr>
             </tr>
@@ -191,14 +219,16 @@
               <td>Avengers: Infinity War</td>
               <td>Sci-fi</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/6ZfuNTqbHE8" data-target="#modal-1">Watch Trailer</button>
               </th>
             <tr>
               <td>8:45pm - 10:30pm</td>
               <td>Casablanca</td>
               <td>Action</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/BkL9l7qovsE" data-target="#modal-1">Watch Trailer</button>
               </th>
             </tr>
             <tr>
@@ -206,7 +236,8 @@
               <td>Baywatch</td>
               <td>Action</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/eyKOgnaf0BU" data-target="#modal-1">Watch Trailer</button>
               </th>
             </tr>
             </tr>
@@ -218,14 +249,16 @@
               <td>The Big Sick</td>
               <td>Comedy/Romance</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/jcD0Daqc3Yw" data-target="#modal-1">Watch Trailer</button>
               </th>
             <tr>
               <td>7:45pm - 10:20pm</td>
               <td>Ford vs. Ferrari</td>
               <td>Action</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/I3h9Z89U9ZA" data-target="#modal-1">Watch Trailer</button>
               </th>
             </tr>
             <tr>
@@ -233,7 +266,8 @@
               <td>Interstellar</td>
               <td>Sci-fi/Adventure</td>
               <th scope="col">
-                <button type="button" class="btn btn-primary">Watch Trailer</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-youtube-link="https://www.youtube.com/embed/zSWdZVtXT7E" data-target="#modal-1">Watch Trailer</button>
               </th>
             </tr>
             </tr>
@@ -260,16 +294,7 @@
   </div>
   </div>
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
