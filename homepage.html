@@ -23,32 +23,20 @@
 </style>
 <script>
   $(document).ready(function () {
-    //     /* Get iframe src attribute value i.e. YouTube video url
-    //     and store it in a variable */
-    //     var url = $(".myModal iframe").attr('src');
 
-    //     /* Assign empty url value to the iframe src attribute when
-    //     modal hide, which stop the video playing */
-    //     $("#modal-1").on('hide.bs.modal', function(){
-    //         $(".myModal iframe").attr('src', '');
-    //     });
-
-    //     /* Assign the initially stored url back to the iframe src
-    //     attribute when modal is displayed again */
-    //     $(".myModal iframe").on('show.bs.modal', function(){
-    //         $("#.myModal iframe").attr('src', url);
-    //     });
-    // });
-
+    //Changing the src attribute of Modal so that it displays the trailer of correct movie when that specific button is pressed.
     $("#modal-1").on("show.bs.modal", function (event) {
-      console.log("hello");
       var button = $(event.relatedTarget);
-      var link = button.data("youtube-link");
-      console.log(link);
-      var iframe = $(".myModal iframe").attr("src",link);
-      
+      var link = button.data("youtube-link"); //accesses data-youtube-link attribute of button that contains URL of movie trailer.
+      $(".myModal iframe").attr("src", link);
+
 
     });
+    //Emptying the modal src attribute when hiding the modal so that the video stops playing after the modal has been closed.
+    $("#modal-1").on('hide.bs.modal', function () {
+      $(".myModal iframe").attr('src', '');
+    });
+
   });
 </script>
 
@@ -168,7 +156,8 @@
               <td>Comedy/Romance</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/YzPq8uVgLe8" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/YzPq8uVgLe8" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             </tr>
             <tr>
@@ -177,7 +166,8 @@
               <td>Comedy/Drama</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/ELeMaP8EPAA" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/ELeMaP8EPAA" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             </tr>
             </tr>
@@ -190,7 +180,8 @@
               <td>Crime/Drama</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/WHXxVmeGQUc" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/WHXxVmeGQUc" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             <tr>
               <td>8:05pm - 10:15pm</td>
@@ -198,7 +189,8 @@
               <td>Romance</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/nSbzyEJ8X9E" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/nSbzyEJ8X9E" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             </tr>
             <tr>
@@ -207,7 +199,8 @@
               <td>Comedy</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/jKCj3XuPG8M" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/jKCj3XuPG8M" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             </tr>
             </tr>
@@ -220,7 +213,8 @@
               <td>Sci-fi</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/6ZfuNTqbHE8" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/6ZfuNTqbHE8" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             <tr>
               <td>8:45pm - 10:30pm</td>
@@ -228,7 +222,8 @@
               <td>Action</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/BkL9l7qovsE" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/BkL9l7qovsE" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             </tr>
             <tr>
@@ -237,7 +232,8 @@
               <td>Action</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/eyKOgnaf0BU" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/eyKOgnaf0BU" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             </tr>
             </tr>
@@ -250,7 +246,8 @@
               <td>Comedy/Romance</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/jcD0Daqc3Yw" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/jcD0Daqc3Yw" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             <tr>
               <td>7:45pm - 10:20pm</td>
@@ -258,7 +255,8 @@
               <td>Action</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/I3h9Z89U9ZA" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/I3h9Z89U9ZA" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             </tr>
             <tr>
@@ -267,7 +265,8 @@
               <td>Sci-fi/Adventure</td>
               <th scope="col">
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-youtube-link="https://www.youtube.com/embed/zSWdZVtXT7E" data-target="#modal-1">Watch Trailer</button>
+                  data-youtube-link="https://www.youtube.com/embed/zSWdZVtXT7E" data-target="#modal-1">Watch
+                  Trailer</button>
               </th>
             </tr>
             </tr>
