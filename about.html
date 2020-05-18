@@ -16,20 +16,25 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
-    <title>Register Now!</title>
+    <script src="https://kit.fontawesome.com/ca775daa7f.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <title>Boston Film Festival</title>
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- NavBar -->
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <nav class="navbar navbar-expand-lg navbar-custom bg-green">
                     <a class="navbar-brand" href="#">
-                        <!-- <img src="" width="40" height="30" alt="Site logo"> -->
-                        Film Festival</a>
+                        <img src="images/logo.png" alt="Site logo">
+                    </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-                        <span class="navbar-toggler-icon"></span>
+                        <i class="fas fa-bars fa-lg" style="color:#5cdb95; outline: none;"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarContent">
                         <ul class="navbar-nav">
@@ -40,7 +45,7 @@
                                 <a class="nav-link" href="#">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
+                                <a class="nav-link" href="about.html">About Us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="registration.html">Registration</a>
@@ -52,27 +57,50 @@
         </div>
     </div>
 
-    <!-- Footer-->
-    <div class="container-fluid">
-        <div class="row bg-light">
-            <div class="col text-center mt-5">
+    <!-- Navbar End -->
 
-                <ul class="list-inline card-text">
-                    <li class="list-inline-item text-primary"><a href="about.html">About Us</a></li>
-                    <li class="list-inline-item text-primary">&middot;</li>
-                    <li class="list-inline-item text-primary"><a href="#">Privacy</a></li>
-                    <li class="list-inline-item text-primary">&middot;</li>
-                    <li class="list-inline-item text-primary"><a href="#">Terms of Use</a></li>
+
+    <div class="container-fluid">
+        <!-- Footer -->
+        <div class="row bg-light">
+            <div class="col-4 text-center">
+                <ul class="list-unstyled card-text">
+                    <li class="list-item text-primary">
+                        <h4>Follow us</h4>
+                    <li class="lis-item text-primary"><a href="twitter.com"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-item text-primary"><a href="facebook.com"><i class="fab fa-facebook"></i></a></li>
+                    <li class="list-item text-primary"><a href="facebook.com"><i class="fab fa-instagram"></i></a></li>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="col-4 text-center">
+
+                <ul class="list-unstyled card-text">
+                    <li class="list-item text-primary">
+                        <h4>Legal & Info</h4>
+                    <li class="lis-item text-primary"><a href="#">About Us</a></li>
+                    <li class="list-item text-primary"><a href="#">Contact Us</a></li>
+                    </li>
 
                 </ul>
             </div>
+            <div class="col-4 text-center ">
+                <ul class="list-unstyled card-text">
+                    <li class="list-item text-primary">
+                        <h4>Boston Info Sites</h4>
+                    <li class="list-item text-primary"><a href="https://www.boston.com/">News</a></li>
+                    <li class="list-item text-primary"><a href="https://www.boston.gov/parks/public-garden">Public
+                            Garden</a></li>
+                    </li>
+                </ul>
+            </div>
+
         </div>
+
     </div>
-
-
-
-    <!-- Footer -->
-
+    <!-- Footer End -->
 </body>
 
 </html>

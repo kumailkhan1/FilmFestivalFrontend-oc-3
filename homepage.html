@@ -17,6 +17,10 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://kit.fontawesome.com/ca775daa7f.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
   <title>Boston Film Festival</title>
 </head>
 <style>
@@ -48,7 +52,7 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Movie Trailer</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -73,17 +77,17 @@
       </div>
     </div>
   </div>
-  
+
   <!-- NavBar -->
   <div class="container-fluid">
     <div class="row">
       <div class="col">
         <nav class="navbar navbar-expand-lg navbar-custom bg-green">
           <a class="navbar-brand" href="#">
-            <!-- <img src="" width="40" height="30" alt="Site logo"> -->
-            Film Festival</a>
+            <img src="images/logo.png" alt="Site logo">
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-            <i class="fas fa-bars fa-lg" style="color:#05386b; outline: none;"></i>
+            <i class="fas fa-bars fa-lg" style="color:#5cdb95; outline: none;"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav">
@@ -106,14 +110,14 @@
     </div>
   </div>
 
-<!-- Navbar End -->
+  <!-- Navbar End -->
 
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <div class="jumbotron m-2" style="background-image: url(https://d1nslcd7m2225b.cloudfront.net/Pictures/480xAny/3/0/7/1322307_tribeca.jpg);
-        background-size: cover;">
-          <h1 class="text-center text-capitalize display-2"> Welcome to Boston Film Festival!</h1>
+        <div class="jumbotron" style="background-image: url(images/greenback.png); background-size: cover;
+        ">
+          <h1 class="text-center text-capitalize display-2" style="color: white;"> Welcome to Boston Film Festival!</h1>
           <p class="lead text-center">
             <em>Showing films entertaining all age groups!</em>
           </p>
@@ -121,9 +125,9 @@
 
           <p class="text-center"> What are you waiting for?</p>
           <div class="text-center">
-            <a href="registration.html"><button type="button" class="btn btn-success btn-lg">Register now!</button></a>
+            <a href="registration.html"><button type="button" class="btn btn-primary btn-lg">Register now!</button></a>
           </div>
-
+          <br>
           <p class="text-center"><em>Only limited seats available!</em></p>
         </div>
       </div>
@@ -287,22 +291,46 @@
 
   </div>
 
-  <div class="row bg-light">
-    <div class="col text-center  mt-5">
+  <div class="container-fluid">
+    <!-- Footer -->
+    <div class="row bg-light">
+      <div class="col-4 text-center">
+        <ul class="list-unstyled card-text">
+          <li class="list-item text-primary">
+            <h4>Follow us</h4>
+          <li class="lis-item text-primary"><a href="twitter.com"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-item text-primary"><a href="facebook.com"><i class="fab fa-facebook"></i></a></li>
+          <li class="list-item text-primary"><a href="facebook.com"><i class="fab fa-instagram"></i></a></li>
+          </li>
 
-      <ul class="list-inline card-text">
-        <li class="list-inline-item text-primary"><a href="#">About Us</a></li>
-        <li class="list-inline-item text-primary">&middot;</li>
-        <li class="list-inline-item text-primary"><a href="#">Privacy</a></li>
-        <li class="list-inline-item text-primary">&middot;</li>
-        <li class="list-inline-item text-primary"><a href="#">Terms of Use</a></li>
+        </ul>
 
-      </ul>
+      </div>
+      <div class="col-4 text-center">
+
+        <ul class="list-unstyled card-text">
+          <li class="list-item text-primary">
+            <h4>Legal & Info</h4>
+          <li class="lis-item text-primary"><a href="#">About Us</a></li>
+          <li class="list-item text-primary"><a href="#">Contact Us</a></li>
+          </li>
+
+        </ul>
+      </div>
+      <div class="col-4 text-center ">
+        <ul class="list-unstyled card-text">
+          <li class="list-item text-primary">
+            <h4>Boston Info Sites</h4>
+          <li class="list-item text-primary"><a href="https://www.boston.com/">News</a></li>
+          <li class="list-item text-primary"><a href="https://www.boston.gov/parks/public-garden">Public Garden</a></li>
+          </li>
+        </ul>
+      </div>
+
     </div>
-  </div>
-  </div>
 
-
+  </div>
+  <!-- Footer End -->
 </body>
 
 </html>

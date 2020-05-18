@@ -2,7 +2,7 @@
 @import "../node_modules/bootstrap/scss/mixins.scss";
 .navbar-custom {
     .navbar-brand {
-      color: $blue;
+      color: white;
   
       @include hover-focus() {
         color: $blue;
@@ -10,41 +10,52 @@
     }
   
     .navbar-nav {
+      margin:auto;
+     
       .nav-link {
-        color:$blue;
+        color:$green;
         text-transform: uppercase;
         font-weight: bold;
+        
         @include hover-focus() {
-          color: $blue;
+          color: white;
         }
   
         
       }
-  
+      .nav-link{
+        margin:20px;
+      }
       .show > .nav-link,
       .active > .nav-link,
       .nav-link.show,
       .nav-link.active {
-        color: $blue;
+        color: $green;
+        
+        @include hover-focus() {
+          
+          color: white;
+        }
       }
+      
     }
   
   
     .navbar-text {
-      color: $blue;
+      color: $green;
       a {
-        color:$blue;
-  
+        color:$green;
+        
         @include hover-focus() {
           
-          color: $green;
+          color: white;
         }
       }
     }
   }
 
   .bg-green {
-    background-color: $green;
+    background-color: $blue;
   }
   
   

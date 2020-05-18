@@ -1,4 +1,6 @@
-// $headings-font-family: "Nexa Bold", Times, serif;
+$headings-font-family: "Cinzel", Times, serif;
+$font-family-sans-serif:      "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
 
 
 //Navbar
@@ -6,8 +8,10 @@ $green : #5cdb95;
 $blue:#05386b;
 $brand-primary: $blue;
 $primary:       $blue ;
-$link-color:$blue;
+$link-color:$green;
 $link-hover-color: $blue;
+
+
 
 
 
