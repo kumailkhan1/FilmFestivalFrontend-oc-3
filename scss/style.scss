@@ -1,4 +1,54 @@
 @import "variable_overrides";
+@import "../node_modules/bootstrap/scss/mixins.scss";
+.navbar-custom {
+    .navbar-brand {
+      color: $blue;
+  
+      @include hover-focus() {
+        color: $blue;
+      }
+    }
+  
+    .navbar-nav {
+      .nav-link {
+        color:$blue;
+        text-transform: uppercase;
+        font-weight: bold;
+        @include hover-focus() {
+          color: $blue;
+        }
+  
+        
+      }
+  
+      .show > .nav-link,
+      .active > .nav-link,
+      .nav-link.show,
+      .nav-link.active {
+        color: $blue;
+      }
+    }
+  
+  
+    .navbar-text {
+      color: $blue;
+      a {
+        color:$blue;
+  
+        @include hover-focus() {
+          
+          color: $green;
+        }
+      }
+    }
+  }
 
+  .bg-green {
+    background-color: $green;
+  }
+  
+  
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
 
